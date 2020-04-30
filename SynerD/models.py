@@ -1,4 +1,5 @@
 from django.db import models
+from django.forms import ModelForm
 
 # Create your models here.
 class UserInfo(models.Model): 
@@ -31,6 +32,11 @@ class UserInfo(models.Model):
 	governmentIDissue  = models.CharField(max_length = 200)
 	governmentIDexpiredate = models.DateField()
 	beneficiaryID = models.CharField(max_length = 200)
+
+class UserInfoForm(ModelForm):
+    class Meta:
+        model = UserInfo
+        fields = ['username', 'firstname', 'middle', 'lastname', 'address1', 'address2', 'city', 'state', 'zipcode', 'email', 'homephone', 'cell', 'dobday']	
 
 class Office(models.Model):
 	officename = models.CharField(max_length = 200)

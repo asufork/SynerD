@@ -8,5 +8,6 @@ urlpatterns = [
 	path('api/', include('SynerD.api.url', namespace='api')),
 	path('', views.index, name = 'index'),
 	path('Register/', views.register, name = 'Register'),
+	path('Member/', views.member, name = 'Member'),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
