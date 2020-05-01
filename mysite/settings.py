@@ -24,7 +24,7 @@ MEDIA_URL = '/media/'
 SECRET_KEY = ')&-*qwu344fo%x9f8m@b#p3$^-uee4%+n=(q657^88x5px0_%f'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = []
 
@@ -98,6 +98,17 @@ DATABASES = {
         },
     }
 }
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
+#         'NAME': 'mydb',
+#         'USER': '',
+#         'PASSWORD': '',
+#         'HOST': 'localhost',
+#         'PORT': '',
+#     }
+# }
 
 
 # Password validation
